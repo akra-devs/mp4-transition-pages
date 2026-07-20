@@ -344,6 +344,11 @@ h1 {
   line-height: 1.05;
 }
 
+.hero-highlight {
+  color: var(--blue-soft);
+  text-shadow: 0 0 28px rgb(96 165 250 / 14%);
+}
+
 h2 {
   margin-bottom: 24px;
   font-size: clamp(2.45rem, 4.5vw, 4.25rem);
@@ -502,16 +507,16 @@ a.button:hover {
   box-shadow: 0 28px 55px rgb(0 0 0 / 48%);
 }
 
-.hero-phone-library {
+.hero-phone-preview {
   z-index: 1;
   top: 26%;
   left: 12%;
   transform: rotate(-5deg);
 }
 
-.hero-phone-editor {
+.hero-phone-model {
   z-index: 2;
-  top: 12%;
+  top: 8%;
   right: 10%;
   transform: rotate(5deg);
 }
@@ -561,6 +566,186 @@ a.button:hover {
   font-size: 13px;
 }
 
+.caption-section {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 88% 10%, rgb(59 130 246 / 18%), transparent 32%),
+    linear-gradient(180deg, rgb(17 24 39 / 48%), transparent 70%);
+  scroll-margin-top: 92px;
+}
+
+.caption-section::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 2.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 2.5%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 68%);
+  pointer-events: none;
+}
+
+.caption-section .container {
+  position: relative;
+}
+
+.caption-intro {
+  display: grid;
+  align-items: end;
+  gap: 64px;
+  margin-bottom: 50px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.8fr);
+}
+
+.caption-intro h2 {
+  margin-bottom: 0;
+}
+
+.caption-summary > p {
+  margin-bottom: 20px;
+  color: var(--body);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.caption-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.caption-badges span {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  color: var(--blue-soft);
+  border: 1px solid rgb(147 197 253 / 26%);
+  border-radius: 999px;
+  background: rgb(59 130 246 / 9%);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.caption-badges span::before {
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+  content: "";
+}
+
+.caption-showcase {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.caption-card {
+  min-width: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 17px;
+  background: rgb(9 9 11 / 78%);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 28%);
+}
+
+.caption-card-copy {
+  min-height: 225px;
+  margin: 0;
+  padding: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.caption-step {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.caption-card h3 {
+  margin-bottom: 10px;
+  font: 500 clamp(1.55rem, 2.4vw, 2rem)/1.32 var(--serif);
+  letter-spacing: -0.03em;
+}
+
+.caption-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.caption-screen {
+  height: 680px;
+  overflow: hidden;
+  background: #f5f0e7;
+}
+
+.caption-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption-screen-model img {
+  object-position: center 40%;
+}
+
+.caption-screen-preview img {
+  object-position: center 8%;
+}
+
+.caption-pipeline {
+  display: grid;
+  overflow: hidden;
+  margin: 20px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgb(255 255 255 / 3%);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+}
+
+.caption-pipeline li {
+  display: grid;
+  min-width: 0;
+  padding: 22px 24px;
+  gap: 3px 12px;
+  grid-template-columns: auto 1fr;
+}
+
+.caption-pipeline li + li {
+  border-left: 1px solid var(--line);
+}
+
+.caption-pipeline li > span {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  grid-row: 1 / 3;
+}
+
+.caption-pipeline strong {
+  font: 500 18px/1.35 var(--serif);
+}
+
+.caption-pipeline small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .section {
   padding: 112px 0;
 }
@@ -598,6 +783,27 @@ a.button:hover {
 .feature-card:hover {
   background: rgb(255 255 255 / 6%);
   border-color: rgb(147 197 253 / 30%);
+}
+
+.feature-card-highlight {
+  border-color: rgb(147 197 253 / 34%);
+  background:
+    linear-gradient(145deg, rgb(59 130 246 / 14%), rgb(255 255 255 / 4%) 64%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+.feature-card-highlight .icon-box {
+  color: #09090b;
+  background: var(--blue-soft);
+}
+
+.feature-tag {
+  display: inline-block;
+  margin: -4px 0 8px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .icon-box {
@@ -888,6 +1094,14 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .caption-intro {
+    gap: 42px;
+  }
+
+  .caption-screen {
+    height: 620px;
+  }
+
   .release-grid {
     align-items: start;
     grid-template-columns: 1fr;
@@ -925,8 +1139,36 @@ footer {
   }
 
   .split-heading,
-  .workflow-grid {
+  .workflow-grid,
+  .caption-intro,
+  .caption-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .caption-intro {
+    gap: 24px;
+  }
+
+  .caption-summary {
+    max-width: 720px;
+  }
+
+  .caption-card {
+    width: min(620px, 100%);
+    margin-inline: auto;
+  }
+
+  .caption-screen {
+    height: 700px;
+  }
+
+  .caption-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .caption-pipeline li + li {
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 
   .split-heading {
@@ -1024,13 +1266,13 @@ footer {
     border-radius: 18px;
   }
 
-  .hero-phone-library {
+  .hero-phone-preview {
     top: 27%;
     left: 3%;
   }
 
-  .hero-phone-editor {
-    top: 14%;
+  .hero-phone-model {
+    top: 10%;
     right: 2%;
   }
 
@@ -1049,6 +1291,27 @@ footer {
 
   .section-heading {
     margin-bottom: 38px;
+  }
+
+  .caption-intro {
+    margin-bottom: 34px;
+  }
+
+  .caption-summary > p {
+    font-size: 16px;
+  }
+
+  .caption-card-copy {
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .caption-screen {
+    height: 570px;
+  }
+
+  .caption-pipeline li {
+    padding: 19px 20px;
   }
 
   .feature-grid {
@@ -1112,6 +1375,10 @@ footer {
 
   .proof-grid p:last-child {
     border-bottom: 0;
+  }
+
+  .caption-screen {
+    height: 520px;
   }
 }
 

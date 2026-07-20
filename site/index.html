@@ -6,14 +6,14 @@
   <meta name="theme-color" content="#09090b">
   <meta
     name="description"
-    content="통화필름(CallFilm) — 통화 녹음을 기기 안에서 표지와 결합해 오래 남을 MP4로 만드는 Android 앱."
+    content="통화필름(CallFilm) — 통화 녹음을 기기 내 AI로 인식해 자막이 있는 개인 보관용 MP4로 만드는 Android 앱."
   >
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="통화필름 — 통화 녹음을 오래 남을 영상으로">
+  <meta property="og:title" content="통화필름 — 통화 녹음을 AI 자막이 있는 영상으로">
   <meta
     property="og:description"
-    content="계정과 서버 없이, 통화 녹음을 기기 안에서 개인 보관용 MP4로 만드세요."
+    content="기기 내 AI가 통화 음성을 인식하고 시간에 맞춘 자막을 MP4 영상에 직접 입힙니다."
   >
   <meta
     property="og:image"
@@ -43,7 +43,7 @@
     </a>
 
     <nav class="desktop-nav" aria-label="주요 메뉴">
-      <a href="#features">소개</a>
+      <a href="#ai-captions">AI 자막</a>
       <a href="#screens">화면</a>
       <a href="#release">출시</a>
       <a
@@ -63,7 +63,7 @@
         </svg>
       </summary>
       <nav aria-label="모바일 메뉴">
-        <a href="#features">소개</a>
+        <a href="#ai-captions">AI 자막</a>
         <a href="#screens">화면</a>
         <a href="#release">출시</a>
         <a
@@ -103,10 +103,12 @@
               <span class="chip chip-blue">BUILD 1</span>
             </div>
 
-            <h1 id="hero-title">통화 녹음을,<br>오래 남을<br>영상으로.</h1>
+            <h1 id="hero-title">
+              통화 녹음을,<br><span class="hero-highlight">AI 자막이 있는</span><br>영상으로.
+            </h1>
             <p class="hero-description">
-              통화 녹음을 표지와 결합해 개인 보관용 MP4로 만드세요.
-              가져오기부터 자막·렌더링·갤러리 저장까지 기기 안에서 끝납니다.
+              통화 녹음을 기기 내 음성 인식 AI가 듣고, 시간에 맞춘 자막으로 만듭니다.
+              자막 생성부터 MP4 입히기·갤러리 저장까지 기기 안에서 끝납니다.
             </p>
 
             <div class="hero-actions">
@@ -121,8 +123,8 @@
                 </svg>
                 Android 마켓 다운로드 예정
               </span>
-              <a class="button button-secondary" href="#screens">
-                화면 미리보기
+              <a class="button button-secondary" href="#ai-captions">
+                AI 자막 실제 화면
                 <svg aria-hidden="true" viewBox="0 0 24 24">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
@@ -151,19 +153,19 @@
               </div>
             </div>
             <img
-              class="hero-phone hero-phone-library"
-              src="./assets/phone-library.png"
+              class="hero-phone hero-phone-preview"
+              src="./assets/phone-caption-preview.png"
               width="1080"
-              height="1920"
-              alt="통화필름 보관함 화면"
+              height="2280"
+              alt="통화필름 영상 표지에 자막 미리보기가 적용된 Pixel 4 화면"
               fetchpriority="high"
             >
             <img
-              class="hero-phone hero-phone-editor"
-              src="./assets/phone-editor.png"
+              class="hero-phone hero-phone-model"
+              src="./assets/phone-ai-caption-model.png"
               width="1080"
-              height="1920"
-              alt="통화필름 표지 편집 화면"
+              height="2280"
+              alt="통화필름에서 기기 내 Base Q5 AI 자막 모델을 선택한 Pixel 4 화면"
               fetchpriority="high"
             >
           </div>
@@ -174,19 +176,19 @@
     <section class="proof-strip" aria-label="제품 요약">
       <div class="proof-grid container">
         <p>
-          <span>처리</span>
-          <strong>기기 안</strong>
-          <small>녹음·자막·영상</small>
+          <span>음성 인식</span>
+          <strong>기기 내 AI</strong>
+          <small>Base Q5 · 외부 전송 없음</small>
         </p>
         <p>
-          <span>대량 만들기</span>
-          <strong>최대 20개</strong>
-          <small>한 번에 순서대로</small>
+          <span>자막 적용</span>
+          <strong>MP4에 직접</strong>
+          <small>시간에 맞춰 영상 픽셀로</small>
         </p>
         <p>
-          <span>출력</span>
-          <strong>720p MP4</strong>
-          <small>H.264 · AAC</small>
+          <span>실기기 검증</span>
+          <strong>Pixel 4</strong>
+          <small>자막 생성·렌더 완료</small>
         </p>
         <p>
           <span>배포</span>
@@ -196,11 +198,99 @@
       </div>
     </section>
 
+    <section
+      class="section caption-section"
+      id="ai-captions"
+      aria-labelledby="caption-title"
+    >
+      <div class="container">
+        <div class="caption-intro">
+          <div>
+            <span class="eyebrow">대표 기능 · AI 자동 자막</span>
+            <h2 id="caption-title">녹음을 듣고,<br>시간을 맞추고,<br>영상에 남깁니다.</h2>
+          </div>
+          <div class="caption-summary">
+            <p>
+              포함된 음성 인식 AI가 통화 오디오를 기기 안에서 처리합니다.
+              인식한 문장을 재생 시간에 맞추고, 재생기와 관계없이 보이도록
+              자막을 MP4 영상에 직접 입힙니다.
+            </p>
+            <div class="caption-badges" aria-label="AI 자막 처리 특징">
+              <span>기기 내 AI</span>
+              <span>인터넷 권한 없음</span>
+              <span>외부 업로드 없음</span>
+              <span>Pixel 4 실기기 검증</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="caption-showcase">
+          <figure class="caption-card">
+            <figcaption class="caption-card-copy">
+              <span class="caption-step">01 · 음성 인식</span>
+              <h3>기기 안의 AI 모델을 고릅니다.</h3>
+              <p>
+                기본 Base Q5 모델이 녹음을 외부로 보내지 않고 Android 기기 안에서
+                자막 문장과 시간을 만듭니다.
+              </p>
+            </figcaption>
+            <div class="caption-screen caption-screen-model">
+              <img
+                src="./assets/phone-ai-caption-model.png"
+                width="1080"
+                height="2280"
+                alt="Pixel 4에서 이 기기 처리와 Base Q5 자막 생성 모델을 선택한 화면"
+                loading="lazy"
+              >
+            </div>
+          </figure>
+
+          <figure class="caption-card">
+            <figcaption class="caption-card-copy">
+              <span class="caption-step">02 · 영상 적용</span>
+              <h3>시간에 맞춰 MP4에 직접 입힙니다.</h3>
+              <p>
+                생성된 자막을 미리 확인하고, H.264·AAC 영상의 픽셀에 함께 렌더해
+                갤러리 저장과 공유까지 이어갑니다.
+              </p>
+            </figcaption>
+            <div class="caption-screen caption-screen-preview">
+              <img
+                src="./assets/phone-caption-preview.png"
+                width="1080"
+                height="2280"
+                alt="Pixel 4에서 통화필름 표지 위에 자막 미리보기가 적용된 화면"
+                loading="lazy"
+              >
+            </div>
+          </figure>
+        </div>
+
+        <ol class="caption-pipeline" aria-label="AI 자막 처리 흐름">
+          <li>
+            <span>01</span>
+            <strong>통화 음성 준비</strong>
+            <small>오디오를 자막 인식에 맞게 나눕니다.</small>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>Base Q5 AI 인식</strong>
+            <small>기기 안에서 문장과 시간을 만듭니다.</small>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>MP4 자막 렌더</strong>
+            <small>재생 시간에 맞춰 영상에 직접 입힙니다.</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section" id="features" aria-labelledby="features-title">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">핵심 기능</span>
-          <h2 id="features-title">통화를 정리하는 데<br>필요한 흐름만 남겼습니다.</h2>
+          <h2 id="features-title">자막부터 보관까지,<br>필요한 흐름만 남겼습니다.</h2>
         </div>
 
         <div class="feature-grid">
@@ -216,15 +306,16 @@
             <p>제목, 상대 이름, 녹음 시각과 파형을 한 장의 정적인 표지로 정리합니다.</p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card feature-card-highlight">
             <div class="icon-box">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M4 12v2a2 2 0 0 0 2 2h2l4 4V4L8 8H6a2 2 0 0 0-2 2v2Z"/>
                 <path d="M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/>
               </svg>
             </div>
-            <h3>온디바이스 자막</h3>
-            <p>포함된 음성 인식 모델로 오디오를 기기 안에서 처리해 영상에 자막을 더합니다.</p>
+            <span class="feature-tag">대표 기능</span>
+            <h3>AI 자동 자막</h3>
+            <p>포함된 Base Q5 음성 인식 AI로 오디오를 기기 안에서 처리해 영상에 자막을 직접 입힙니다.</p>
           </article>
 
           <article class="feature-card">
@@ -345,7 +436,7 @@
             </li>
             <li>
               <span>3</span>
-              <p>필요하면 자동 자막을 켠 뒤 기기 안에서 MP4를 만듭니다.</p>
+              <p>AI 자동 자막을 켜고 기기 내 모델을 선택한 뒤, 자막이 입혀진 MP4를 만듭니다.</p>
             </li>
             <li>
               <span>4</span>
@@ -390,7 +481,7 @@
           <p class="release-label">ANDROID 마켓 출시 예정</p>
           <h2 id="release-title">공식 마켓에서<br>안전하게 설치할 수 있도록.</h2>
           <p>
-            BUILD 1의 실기기·스토어 검증과 Google Play 등록을 준비하고 있습니다.
+            BUILD 1의 AI 자막·렌더 실기기 검증과 Google Play 등록을 준비하고 있습니다.
             배포가 시작되면 이 페이지의 예정 상태를 공식 설치 링크로 교체합니다.
           </p>
         </div>
@@ -419,7 +510,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="./assets/akra-logo.png" width="1024" height="1024" alt="Akra Dev">
-        <p>통화 녹음을 오래 남을 영상으로.</p>
+        <p>통화 녹음을 AI 자막이 있는 영상으로.</p>
       </div>
       <nav aria-label="하단 메뉴">
         <a href="#features">제품 소개</a>

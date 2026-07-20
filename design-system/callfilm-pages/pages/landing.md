@@ -21,15 +21,26 @@ convention. These rules override `../MASTER.md`.
 ## Layout
 
 1. Fixed rounded Akra navigation
-2. Two-column product hero with status chips and real app screens
-3. Four-column proof strip
-4. Six feature cards in a 3×2 grid
-5. Three real-screen cards
-6. Two-column usage and cautions
-7. Light Android market status CTA
+2. Two-column product hero led by AI captions and real caption screens
+3. Four-column AI caption proof strip
+4. Dedicated two-screen AI caption proof section
+5. Six feature cards in a 3×2 grid
+6. Three real-screen cards
+7. Two-column usage and cautions
+8. Light Android market status CTA
 
 Use 1280px maximum content width and 112px desktop section spacing. Collapse to
 one column without horizontal scrolling at 820px and below.
+
+## AI caption treatment
+
+- AI captions are the primary product promise, not a secondary feature card.
+- Pair the real on-device model selector with the real caption preview screen.
+- Keep `기기 내 AI`, `인터넷 권한 없음`, `외부 업로드 없음`, and the Pixel 4
+  verification evidence adjacent to the screenshots.
+- Describe the concrete flow as speech recognition, timestamp alignment, and MP4
+  burn-in. Do not use vague AI claims or imply that unavailable cloud providers
+  can be selected.
 
 ## Product-state rules
 

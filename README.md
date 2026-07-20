@@ -2,7 +2,8 @@
 
 Public product page for
 [CallFilm](https://akra.kr/mp4-transition-pages/), an Android app
-that turns call recordings into locally rendered MP4 archives.
+that turns call recordings into locally rendered MP4 archives with on-device
+AI captions.
 
 The Flutter source stays in the private `RefinedStone/mp4-transition`
 repository. This public repository contains only the product page, approved
