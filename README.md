@@ -7,7 +7,8 @@ AI captions.
 
 The Flutter source stays in the private `RefinedStone/mp4-transition`
 repository. This public repository contains only the product page, approved
-store artwork, and the GitHub Pages deployment workflow.
+store artwork, public policy and support documents, a synthetic reviewer
+fixture, and the GitHub Pages deployment workflow.
 
 Current public status:
 
@@ -19,8 +20,21 @@ Current public status:
 ## Repository layout
 
 - `site/`: static product page and public artwork
+- `site/privacy/`: public privacy policy
+- `site/support/`: public support FAQ and inquiry route
+- `site/assets/Review_Tone_20260715_120000.wav`: synthetic Google Play
+  reviewer fixture; no voice or personal data
 - `design-system/`: page-specific visual conventions
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment
+
+Public release resources:
+
+- Privacy policy:
+  <https://akra.kr/mp4-transition-pages/privacy/>
+- Support:
+  <https://akra.kr/mp4-transition-pages/support/>
+- Reviewer fixture:
+  <https://akra.kr/mp4-transition-pages/assets/Review_Tone_20260715_120000.wav>
 
 ## Local preview
 

@@ -31,11 +31,22 @@ jobs:
         run: |
           set -euo pipefail
           test -s site/index.html
+          test -s site/privacy/index.html
+          test -s site/support/index.html
           test -s site/styles.css
           test -s site/assets/callfilm-icon.png
           test -s site/assets/phone-library.png
+          test -s site/assets/Review_Tone_20260715_120000.wav
           grep -Fq 'BUILD 1' site/index.html
           grep -Fq 'Android 마켓 다운로드 예정' site/index.html
+          grep -Fq 'https://akra.kr/mp4-transition-pages/privacy/' site/privacy/index.html
+          grep -Fq 'Akra Dev Studio' site/privacy/index.html
+          grep -Fq 'https://github.com/akra-devs/mp4-transition-pages/issues/new' site/privacy/index.html
+          grep -Fq 'https://akra.kr/mp4-transition-pages/support/' site/support/index.html
+          printf '%s  %s\n' \
+            '6b34507570027d102e80c61a3059e5f4643cd8047adcf36cf1708fa26adbe7b7' \
+            'site/assets/Review_Tone_20260715_120000.wav' \
+            | sha256sum --check --strict
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
