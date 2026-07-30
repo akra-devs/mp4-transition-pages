@@ -39,6 +39,9 @@ jobs:
           test -s site/styles.css
           test -s site/assets/callfilm-icon.png
           test -s site/assets/phone-library.png
+          test -s site/assets/phone-editor.png
+          test -s site/assets/phone-rendering.png
+          test -s site/assets/phone-completed.png
           test -s site/assets/Review_Tone_20260715_120000.wav
           grep -Fq 'BUILD 1' site/index.html
           grep -Fq 'Android 마켓 다운로드 예정' site/index.html
@@ -58,11 +61,28 @@ jobs:
           grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
           grep -Fq '처음 선택한 파일은 그대로' site/support/index.html
           grep -Fq 'AI 자막과 완성 영상' site/index.html
+          grep -Fq 'AI 자막은 음질에 따라 다르게 인식될 수 있습니다' site/index.html
+          grep -Fq 'AI 자막은 음질에 따라 다르게 인식될 수 있습니다' site/support/index.html
+          grep -Fq '완성 영상에서 자막을 확인한 뒤 저장·공유합니다' site/index.html
+          grep -Fq '완성 화면의 재생' site/support/index.html
           grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
+          ! grep -Eq \
+            'phone-(ai-caption-model|caption-preview)[.]png|API [(]개발 예정[)]|외부 서버 [(]개발 예정[)]|상용 API와 외부 서버' \
+            site/index.html site/support/index.html
           ! grep -Fq '앱을 업데이트한 뒤 다시 시도해 주세요' site/support/index.html
           ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/privacy/index.html
+          printf '%s  %s\n' \
+            '23b2189914c8ae0ace0a9fd7929421044d25f8abd3e1118940eda5c338397aa6' \
+            'site/assets/phone-library.png' \
+            '772de1cf5014751024ed6d59973fb90e7c2bf9541285bcce7f2febc3c12d02dd' \
+            'site/assets/phone-editor.png' \
+            'a833ee448460db2afa3c5e969361c75fdb27fd4ae1715231d33ebd3e6698861b' \
+            'site/assets/phone-rendering.png' \
+            'd899f8a5f1b89c42687bf12809fdfff1ee9f9ef014b04114cafeb574b18bce05' \
+            'site/assets/phone-completed.png' \
+            | sha256sum --check --strict
           printf '%s  %s\n' \
             '6b34507570027d102e80c61a3059e5f4643cd8047adcf36cf1708fa26adbe7b7' \
             'site/assets/Review_Tone_20260715_120000.wav' \

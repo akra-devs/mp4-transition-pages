@@ -507,14 +507,14 @@ a.button:hover {
   box-shadow: 0 28px 55px rgb(0 0 0 / 48%);
 }
 
-.hero-phone-preview {
+.hero-phone-rendering {
   z-index: 1;
   top: 26%;
   left: 12%;
   transform: rotate(-5deg);
 }
 
-.hero-phone-model {
+.hero-phone-editor {
   z-index: 2;
   top: 8%;
   right: 10%;
@@ -696,12 +696,12 @@ a.button:hover {
   object-fit: cover;
 }
 
-.caption-screen-model img {
+.caption-screen-editor img {
   object-position: center 40%;
 }
 
-.caption-screen-preview img {
-  object-position: center 8%;
+.caption-screen-rendering img {
+  object-position: center 43%;
 }
 
 .caption-pipeline {
@@ -875,7 +875,7 @@ a.button:hover {
 
 .screen-frame {
   overflow: hidden;
-  aspect-ratio: 9 / 13;
+  aspect-ratio: 9 / 16;
   background:
     radial-gradient(circle at 80% 4%, rgb(59 130 246 / 16%), transparent 35%),
     #101014;
@@ -1575,7 +1575,7 @@ footer {
   }
 
   .screen-frame {
-    aspect-ratio: 9 / 14;
+    aspect-ratio: 9 / 16;
   }
 
   .document-shell {
@@ -1672,12 +1672,12 @@ footer {
     border-radius: 18px;
   }
 
-  .hero-phone-preview {
+  .hero-phone-rendering {
     top: 27%;
     left: 3%;
   }
 
-  .hero-phone-model {
+  .hero-phone-editor {
     top: 10%;
     right: 2%;
   }
