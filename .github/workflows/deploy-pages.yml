@@ -48,9 +48,13 @@ jobs:
           grep -Fq 'AI 자막을 만들지 못했습니다' site/support/index.html
           grep -Fq '자막 끄고 영상 만들기' site/support/index.html
           grep -Fq '자막 다시 시도' site/support/index.html
+          grep -Fq '광고 설정' site/support/index.html
+          grep -Fq '이 버전에서는 대량 만들기 광고를 사용할 수 없습니다' site/support/index.html
+          grep -Fq '>다시 시도</strong>' site/support/index.html
           grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
           grep -Fq 'AI 자막과 완성 영상' site/index.html
           grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
+          ! grep -Fq '앱을 업데이트한 뒤 다시 시도해 주세요' site/support/index.html
           ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/privacy/index.html
