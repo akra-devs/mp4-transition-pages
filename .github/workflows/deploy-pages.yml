@@ -42,9 +42,12 @@ jobs:
           grep -Fq 'https://akra.kr/mp4-transition-pages/privacy/' site/privacy/index.html
           grep -Fq 'Akra Dev Studio' site/privacy/index.html
           grep -Fq 'https://github.com/akra-devs/mp4-transition-pages/issues/new' site/privacy/index.html
+          grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/privacy/index.html
           grep -Fq 'https://akra.kr/mp4-transition-pages/support/' site/support/index.html
           grep -Fq '기기의 영상 처리 기능에서 오류가 발생했습니다' site/support/index.html
           grep -Fq 'AI 자막을 만들지 못했습니다' site/support/index.html
+          grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
+          grep -Fq 'AI 자막과 완성 영상' site/index.html
           grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
           ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/support/index.html
