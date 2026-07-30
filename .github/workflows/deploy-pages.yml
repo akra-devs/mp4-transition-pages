@@ -58,6 +58,10 @@ jobs:
           grep -Fq '광고 설정' site/support/index.html
           grep -Fq '이 버전에서는 대량 만들기 광고를 사용할 수 없습니다' site/support/index.html
           grep -Fq '>다시 시도</strong>' site/support/index.html
+          grep -Fq '현재 앱 실행 중에는' site/privacy/index.html
+          grep -Fq '현재 앱 실행 중에는' site/support/index.html
+          grep -Fq '대량 만들기를 이용할 수 있습니다' site/privacy/index.html
+          grep -Fq '대량 만들기를 이용할 수 있습니다' site/support/index.html
           grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
           grep -Fq '처음 선택한 파일은 그대로' site/support/index.html
           grep -Fq 'AI 자막과 완성 영상' site/index.html
@@ -73,6 +77,8 @@ jobs:
           ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/support/index.html
           ! grep -Fq 'Google Play 출시 후' site/privacy/index.html
+          ! grep -Eq '앱을 (종료|닫기)|앱 종료 전' \
+            site/privacy/index.html site/support/index.html
           printf '%s  %s\n' \
             '23b2189914c8ae0ace0a9fd7929421044d25f8abd3e1118940eda5c338397aa6' \
             'site/assets/phone-library.png' \
