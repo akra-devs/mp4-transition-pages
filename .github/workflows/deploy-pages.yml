@@ -46,6 +46,8 @@ jobs:
           grep -Fq 'https://akra.kr/mp4-transition-pages/support/' site/support/index.html
           grep -Fq '기기의 영상 처리 기능에서 오류가 발생했습니다' site/support/index.html
           grep -Fq 'AI 자막을 만들지 못했습니다' site/support/index.html
+          grep -Fq '자막 끄고 영상 만들기' site/support/index.html
+          grep -Fq '자막 다시 시도' site/support/index.html
           grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
           grep -Fq 'AI 자막과 완성 영상' site/index.html
           grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
