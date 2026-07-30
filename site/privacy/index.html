@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#09090b">
   <meta
     name="description"
-    content="통화필름(CallFilm)의 개인정보 처리방침. 선택한 미디어와 자막 생성은 기기 안에서 처리되며 외부 서버로 전송되지 않습니다."
+    content="통화필름(CallFilm)의 개인정보 처리방침. 녹음과 자막은 기기 안에서 처리하고 대량 만들기에는 Google 보상형 광고를 사용합니다."
   >
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
@@ -66,7 +66,8 @@
       <h1>개인정보<br>처리방침</h1>
       <p>
         통화필름은 사용자가 직접 선택한 미디어를 개인 보관용 영상으로 만드는
-        로컬 도구입니다. 선택한 파일과 AI 자막은 기기 안에서 처리합니다.
+        Android 앱입니다. 선택한 파일과 AI 자막은 기기 안에서 처리하고,
+        대량 만들기에는 Google 보상형 광고를 사용합니다.
       </p>
       <p class="document-date">
         시행 및 최종 수정일
@@ -80,12 +81,12 @@
         <strong>사용자 기기 안</strong>
       </div>
       <div>
-        <span>원격 전송</span>
+        <span>녹음·자막 전송</span>
         <strong>하지 않음</strong>
       </div>
       <div>
-        <span>계정·광고·추적</span>
-        <strong>사용하지 않음</strong>
+        <span>광고 데이터</span>
+        <strong>Google 처리</strong>
       </div>
     </aside>
 
@@ -114,11 +115,11 @@
 
       <section id="collection" aria-labelledby="collection-title">
         <span class="document-index" aria-hidden="true">02</span>
-        <h2 id="collection-title">수집·전송·공유</h2>
+        <h2 id="collection-title">녹음·자막의 수집·전송·공유</h2>
         <p>
-          앱은 계정, 광고, 분석, 추적 또는 원격 서버를 사용하지 않습니다.
-          선택한 미디어나 통화 기록 정보를 개발자 또는 제3자 서버로
-          수집·전송하지 않습니다.
+          앱은 계정이나 개발자 운영 서버를 사용하지 않습니다. 선택한 미디어,
+          연락처 정보, 통화 기록, 자막과 결과 영상을 개발자 또는 광고 사업자
+          서버로 수집·전송하지 않습니다.
         </p>
         <p>
           사용자가 공유를 요청할 때마다 앱 전용
@@ -133,19 +134,65 @@
         </p>
       </section>
 
-      <section id="permissions" aria-labelledby="permissions-title">
+      <section id="advertising" aria-labelledby="advertising-title">
         <span class="document-index" aria-hidden="true">03</span>
+        <h2 id="advertising-title">보상형 광고와 Google 처리 정보</h2>
+        <p>
+          앱을 시작할 때 Google User Messaging Platform으로 광고 개인정보
+          상태를 확인합니다. Google Mobile Ads 광고는 대량 만들기에서
+          사용자가 <strong>광고 보고 시작하기</strong>를 선택한 경우에만
+          표시합니다. 보상을 받으면 앱을 종료할 때까지 대량 만들기를 다시
+          이용할 수 있습니다. 광고를 닫거나 불러오기에 실패하면 목록은
+          시작되지 않습니다.
+        </p>
+        <p>
+          Google Mobile Ads SDK는 광고 제공, 분석과 부정 사용 방지를 위해
+          다음 정보를 자동으로 수집하고 Google과 공유할 수 있습니다.
+        </p>
+        <ul>
+          <li>IP 주소와 IP 주소에서 추정한 대략적인 위치</li>
+          <li>앱 실행, 탭과 광고 시청 같은 제품 상호작용</li>
+          <li>앱·SDK 실행 시간, 멈춤 비율과 에너지 사용량 같은 진단 정보</li>
+          <li>앱 세트 ID 등 기기·계정 식별자</li>
+        </ul>
+        <p>
+          앱은 Android 광고 ID 권한을 제거해 광고 ID 수집을 비활성화하고,
+          개인 맞춤이 아닌 광고를 요청합니다. 위 정보는 전송 중 TLS로
+          암호화됩니다. 녹음 파일, 연락처, 통화 기록, 자막, 표지와 결과 영상은
+          광고 SDK에 전달하지 않습니다.
+        </p>
+        <p>
+          Google의 처리와 보관에는
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noreferrer"
+          >Google 개인정보처리방침</a>과
+          <a
+            href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
+            target="_blank"
+            rel="noreferrer"
+          >Google Mobile Ads Data safety 안내</a>가 적용됩니다. 필요한
+          지역에서는 Google 동의 양식이 표시되며, Google이 개인정보 선택
+          항목을 요구하는 경우 앱의 <strong>설정 &gt; 광고 개인정보
+          선택</strong>에서 다시 열 수 있습니다.
+        </p>
+      </section>
+
+      <section id="permissions" aria-labelledby="permissions-title">
+        <span class="document-index" aria-hidden="true">04</span>
         <h2 id="permissions-title">권한</h2>
         <p>
-          앱은 통화기록, 연락처 전체 읽기, 마이크, 전체 저장소 또는 인터넷
-          권한을 요청하지 않습니다. 파일과 연락처는 Android 시스템 선택기에서
+          앱은 통화기록, 연락처 전체 읽기, 마이크 또는 전체 저장소 권한을
+          요청하지 않습니다. 파일과 연락처는 Android 시스템 선택기에서
           사용자가 직접 고른 항목만 읽습니다. 완성 영상 저장은 MediaStore 또는
-          시스템 저장 위치 선택기를 사용합니다.
+          시스템 저장 위치 선택기를 사용합니다. 인터넷 권한은 광고 개인정보
+          상태 확인과 사용자가 선택한 보상형 광고에 사용합니다.
         </p>
       </section>
 
       <section id="security" aria-labelledby="security-title">
-        <span class="document-index" aria-hidden="true">04</span>
+        <span class="document-index" aria-hidden="true">05</span>
         <h2 id="security-title">안전한 처리</h2>
         <p>
           선택한 파일과 통화 기록은 다른 일반 앱이 직접 읽을 수 없는 Android
@@ -154,16 +201,16 @@
           처리합니다.
         </p>
         <p>
-          릴리스 앱은 인터넷 권한을 요청하지 않고 원격 전송을 수행하지 않으며,
-          민감한 녹음이 다른 앱의 오디오 재생 캡처 대상이 되지 않도록
-          차단합니다. Android 클라우드 백업과 기기 간 전송도 비활성화합니다.
-          사용자가 공유나 저장을 직접 요청한 경우에만 Android 시스템 기능을
-          통해 결과 파일을 내보냅니다.
+          원격 자막 API, API 키, 오디오 업로드 또는 원격 모델 다운로드를
+          사용하지 않습니다. 민감한 녹음이 다른 앱의 오디오 재생 캡처 대상이
+          되지 않도록 차단합니다. Android 클라우드 백업과 기기 간 전송도
+          비활성화합니다. 사용자가 공유나 저장을 직접 요청한 경우에만 Android
+          시스템 기능을 통해 결과 파일을 내보냅니다.
         </p>
       </section>
 
       <section id="retention" aria-labelledby="retention-title">
-        <span class="document-index" aria-hidden="true">05</span>
+        <span class="document-index" aria-hidden="true">06</span>
         <h2 id="retention-title">보관과 삭제</h2>
         <p>
           통화 기록은 사용자가 앱 안에서 삭제하거나 앱을 제거할 때까지 앱 전용
@@ -189,10 +236,16 @@
           </li>
         </ul>
         <p>앱을 제거하면 Android가 앱 전용 데이터도 삭제합니다.</p>
+        <p>
+          광고 SDK가 처리하는 정보는 개발자 서버에 저장되지 않으며 개발자가
+          개별 사용자를 식별해 보관하거나 삭제할 수 없습니다. 사용자는 Android
+          설정의 광고 개인정보 제어와 Google 계정의 개인정보 도구를 이용할 수
+          있습니다.
+        </p>
       </section>
 
       <section id="responsibility" aria-labelledby="responsibility-title">
-        <span class="document-index" aria-hidden="true">06</span>
+        <span class="document-index" aria-hidden="true">07</span>
         <h2 id="responsibility-title">이용자 책임</h2>
         <p>
           통화 녹음과 공유 관련 법률 및 동의 요건은 국가와 지역에 따라
@@ -206,7 +259,7 @@
         class="document-contact"
         aria-labelledby="contact-title"
       >
-        <span class="document-index" aria-hidden="true">07</span>
+        <span class="document-index" aria-hidden="true">08</span>
         <h2 id="contact-title">개인정보 문의</h2>
         <dl>
           <div>

@@ -36,7 +36,7 @@ one column without horizontal scrolling at 820px and below.
 
 - AI captions are the primary product promise, not a secondary feature card.
 - Pair the real on-device model selector with the real caption preview screen.
-- Keep `기기 내 AI`, `인터넷 권한 없음`, `외부 업로드 없음`, and the Pixel 4
+- Keep `기기 내 AI`, `자막 외부 전송 없음`, `외부 업로드 없음`, and the Pixel 4
   verification evidence adjacent to the screenshots.
 - Describe the concrete flow as speech recognition, timestamp alignment, and MP4
   burn-in. Do not use vague AI claims or imply that unavailable cloud providers
