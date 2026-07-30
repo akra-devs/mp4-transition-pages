@@ -45,6 +45,10 @@ jobs:
           grep -Fq 'https://akra.kr/mp4-transition-pages/support/' site/support/index.html
           grep -Fq '기기의 영상 처리 기능에서 오류가 발생했습니다' site/support/index.html
           grep -Fq 'AI 자막을 만들지 못했습니다' site/support/index.html
+          grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
+          ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
+          ! grep -Fq 'Google Play 출시 후' site/support/index.html
+          ! grep -Fq 'Google Play 출시 후' site/privacy/index.html
           printf '%s  %s\n' \
             '6b34507570027d102e80c61a3059e5f4643cd8047adcf36cf1708fa26adbe7b7' \
             'site/assets/Review_Tone_20260715_120000.wav' \
