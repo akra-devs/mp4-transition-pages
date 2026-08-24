@@ -33,6 +33,7 @@ Public release resources:
   <https://akra.kr/mp4-transition-pages/privacy/>
 - Support:
   <https://akra.kr/mp4-transition-pages/support/>
+- Email: <help@akra.kr>
 - Reviewer fixture:
   <https://akra.kr/mp4-transition-pages/assets/Review_Tone_20260715_120000.wav>
 
