@@ -1,538 +1,388 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09090b">
-  <meta
-    name="description"
-    content="통화필름(CallFilm) — 통화 녹음을 기기 내 AI로 인식해 자막이 있는 개인 보관용 MP4로 만드는 Android 앱."
-  >
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="통화필름 — 통화 녹음을 AI 자막이 있는 영상으로">
-  <meta
-    property="og:description"
-    content="기기 내 AI가 통화 음성을 인식하고 시간에 맞춘 자막을 MP4 영상에 직접 입힙니다."
-  >
-  <meta
-    property="og:image"
-    content="https://akra.kr/mp4-transition-pages/assets/callfilm-feature.png"
-  >
-  <meta property="og:url" content="https://akra.kr/mp4-transition-pages/">
-  <link rel="canonical" href="https://akra.kr/mp4-transition-pages/">
-  <title>통화필름 (CallFilm) | Akra Dev</title>
-  <link rel="icon" href="./assets/callfilm-icon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-  >
-  <link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#09090b" name="theme-color"/>
+<meta content="통화필름 — 원하는 말을 검색하고 자막 시간을 눌러 그 순간으로 이동하세요. 녹음과 AI 자막은 기기 안에서 처리합니다." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="통화필름 — 원하는 말을 찾아, 그 순간으로" property="og:title"/>
+<meta content="녹음 파일 가져오기, AI 자막 만들기, 원하는 말 검색, 자막 시간을 눌러 이동, 영상 저장까지." property="og:description"/>
+<meta content="https://akra.kr/mp4-transition-pages/assets/callfilm-feature.png" property="og:image"/>
+<meta content="https://akra.kr/mp4-transition-pages/" property="og:url"/>
+<link href="https://akra.kr/mp4-transition-pages/" rel="canonical"/>
+<title>통화필름 (CallFilm) | Akra Dev</title>
+<link href="./assets/callfilm-icon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="./styles.css?v=4011" rel="stylesheet"/>
 </head>
 <body>
-  <a class="skip-link" href="#main">본문으로 바로가기</a>
-
-  <header class="site-nav">
-    <a class="brand" href="https://akra.kr/" aria-label="Akra Dev 홈">
-      <img src="./assets/akra-logo.png" width="1024" height="1024" alt="Akra Dev">
-    </a>
-
-    <nav class="desktop-nav" aria-label="주요 메뉴">
-      <a href="#ai-captions">AI 자막</a>
-      <a href="#screens">화면</a>
-      <a href="#release">출시</a>
-      <a
-        class="nav-cta"
-        href="https://github.com/akra-devs/mp4-transition-pages"
-        target="_blank"
-        rel="noreferrer"
-      >
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+<header class="site-nav">
+<a aria-label="Akra Dev 홈" class="brand" href="https://akra.kr/">
+<img alt="Akra Dev" height="1024" src="./assets/akra-logo.png" width="1024"/>
+</a>
+<nav aria-label="주요 메뉴" class="desktop-nav">
+<a href="#ai-captions">AI 자막</a>
+<a href="#screens">화면</a>
+<a href="#release">출시</a>
+<a class="nav-cta" href="https://github.com/akra-devs/mp4-transition-pages" rel="noreferrer" target="_blank">
         GitHub
       </a>
-    </nav>
-
-    <details class="mobile-menu">
-      <summary aria-label="메뉴 열기">
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </summary>
-      <nav aria-label="모바일 메뉴">
-        <a href="#ai-captions">AI 자막</a>
-        <a href="#screens">화면</a>
-        <a href="#release">출시</a>
-        <a
-          href="https://github.com/akra-devs/mp4-transition-pages"
-          target="_blank"
-          rel="noreferrer"
-        >
+</nav>
+<details class="mobile-menu">
+<summary aria-label="메뉴 열기">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</summary>
+<nav aria-label="모바일 메뉴">
+<a href="#ai-captions">AI 자막</a>
+<a href="#screens">화면</a>
+<a href="#release">출시</a>
+<a href="https://github.com/akra-devs/mp4-transition-pages" rel="noreferrer" target="_blank">
           GitHub
         </a>
-      </nav>
-    </details>
-  </header>
-
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container">
-        <a class="back-link" href="https://akra.kr/#showcase">
-          <svg aria-hidden="true" viewBox="0 0 20 20">
-            <path d="m12.5 4.5-5.5 5 5.5 5"/>
-          </svg>
+</nav>
+</details>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero">
+<div aria-hidden="true" class="hero-glow"></div>
+<div class="container">
+<a class="back-link" href="https://akra.kr/#showcase">
+<svg aria-hidden="true" viewbox="0 0 20 20">
+<path d="m12.5 4.5-5.5 5 5.5 5"></path>
+</svg>
           작업 목록으로
         </a>
-
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <div class="product-meta">
-              <img
-                class="app-icon"
-                src="./assets/callfilm-icon.png"
-                width="512"
-                height="512"
-                alt=""
-              >
-              <span class="chip chip-light">최신 대표 제품</span>
-              <span class="chip">v1.0.0</span>
-              <span class="chip chip-blue">BUILD 1</span>
-            </div>
-
-            <h1 id="hero-title">
-              통화 녹음을,<br><span class="hero-highlight">AI 자막이 있는</span><br>영상으로.
-            </h1>
-            <p class="hero-description">
-              통화 녹음을 기기 내 음성 인식 AI가 듣고, 시간에 맞춘 자막으로 만듭니다.
-              자막 생성부터 MP4 입히기·갤러리 저장까지 기기 안에서 끝납니다.
-            </p>
-
-            <div class="hero-actions">
-              <span
-                class="button button-primary button-disabled"
-                role="status"
-                aria-disabled="true"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 7v5l3 2"/>
-                  <circle cx="12" cy="12" r="9"/>
-                </svg>
-                Android 마켓 다운로드 예정
-              </span>
-              <a class="button button-secondary" href="#ai-captions">
+<div class="hero-grid">
+<div class="hero-copy">
+<div class="product-meta">
+<img alt="" class="app-icon" height="512" src="./assets/callfilm-icon.png" width="512"/>
+<span class="chip chip-light">최신 대표 제품</span>
+<span class="chip">v1.0.0</span>
+<span class="chip chip-blue">기기 내 처리</span>
+</div>
+<h1 id="hero-title">원하는 말을 찾아<br/><span class="hero-highlight">자막을 누르면</span><br/>그 순간으로.</h1>
+<p class="hero-description">녹음 파일을 가져와 AI 자막 영상을 만드세요. 보관함에서 원하는 말을 검색하고 자막 시간을 눌러 그 순간으로 이동할 수 있습니다.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="https://play.google.com/store/apps/details?id=kr.akra.callfilm">Google Play에서 설치</a>
+<a class="button button-secondary" href="#ai-captions">
                 AI 자막 실제 화면
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="m9 18 6-6-6-6"/>
-                </svg>
-              </a>
-            </div>
-
-            <p class="hero-note">
-              Android 마켓 등록과 최종 배포 검증이 끝나면 공식 설치 링크를 제공합니다.
-              APK 직접 다운로드는 제공하지 않습니다.
-            </p>
-            <p class="build-line">
-              <span>v1.0.0</span>
-              <span aria-hidden="true">·</span>
-              <span>BUILD 1</span>
-              <span aria-hidden="true">·</span>
-              <span>Android 7.0 이상</span>
-            </p>
-          </div>
-
-          <div class="hero-visual">
-            <div class="visual-brand" aria-hidden="true">
-              <img src="./assets/callfilm-icon.png" width="512" height="512" alt="">
-              <div>
-                <span>CALLFILM</span>
-                <small>PRIVATE ARCHIVE</small>
-              </div>
-            </div>
-            <img
-              class="hero-phone hero-phone-rendering"
-              src="./assets/phone-rendering.png"
-              width="1080"
-              height="1920"
-              alt="통화필름에서 AI 자막 생성 진행률과 취소 버튼을 보여주는 화면"
-              fetchpriority="high"
-            >
-            <img
-              class="hero-phone hero-phone-editor"
-              src="./assets/phone-editor.png"
-              width="1080"
-              height="1920"
-              alt="통화필름에서 기기 내 Base Q5 AI 자막과 인식 안내를 보여주는 화면"
-              fetchpriority="high"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="proof-strip" aria-label="제품 요약">
-      <div class="proof-grid container">
-        <p>
-          <span>음성 인식</span>
-          <strong>기기 내 AI</strong>
-          <small>Base Q5 · 외부 전송 없음</small>
-        </p>
-        <p>
-          <span>자막 적용</span>
-          <strong>MP4에 직접</strong>
-          <small>시간에 맞춰 영상 픽셀로</small>
-        </p>
-        <p>
-          <span>실기기 검증</span>
-          <strong>Pixel 4</strong>
-          <small>자막 생성·렌더 완료</small>
-        </p>
-        <p>
-          <span>배포</span>
-          <strong>출시 예정</strong>
-          <small>Android 마켓</small>
-        </p>
-      </div>
-    </section>
-
-    <section
-      class="section caption-section"
-      id="ai-captions"
-      aria-labelledby="caption-title"
-    >
-      <div class="container">
-        <div class="caption-intro">
-          <div>
-            <span class="eyebrow">대표 기능 · AI 자동 자막</span>
-            <h2 id="caption-title">녹음을 듣고,<br>시간을 맞추고,<br>영상에 남깁니다.</h2>
-          </div>
-          <div class="caption-summary">
-            <p>
+                <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="m9 18 6-6-6-6"></path>
+</svg>
+</a>
+</div>
+<p class="hero-note">Google Play에서 설치하고 업데이트하세요. 녹음과 자막 처리는 기기 안에서 진행됩니다.</p>
+<p class="build-line">Android 7.0 이상 · Google Play 제공</p>
+</div>
+<div class="hero-visual">
+<div aria-hidden="true" class="visual-brand">
+<img alt="" height="512" src="./assets/callfilm-icon.png" width="512"/>
+<div>
+<span>CALLFILM</span>
+<small>PRIVATE ARCHIVE</small>
+</div>
+</div>
+<img alt="통화필름에서 AI 자막 생성 진행률과 취소 버튼을 보여주는 화면" class="hero-phone hero-phone-rendering" fetchpriority="high" height="1920" src="./assets/phone-rendering.png" width="1080"/>
+<img alt="통화필름에서 기기 내 Base Q5 AI 자막과 인식 안내를 보여주는 화면" class="hero-phone hero-phone-editor" fetchpriority="high" height="1920" src="./assets/phone-editor.png" width="1080"/>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="제품 요약" class="proof-strip">
+<div class="proof-grid container">
+<p>
+<span>음성 인식</span>
+<strong>기기 내 AI</strong>
+<small>Base Q5 · 외부 전송 없음</small>
+</p>
+<p>
+<span>자막 적용</span>
+<strong>MP4에 직접</strong>
+<small>시간에 맞춰 영상 픽셀로</small>
+</p>
+<p>
+<span>실기기 검증</span>
+<strong>Pixel 4</strong>
+<small>자막 생성·렌더 완료</small>
+</p>
+<p>
+<span>배포</span>
+<strong>Google Play</strong>
+<small>설치 · 업데이트</small>
+</p>
+</div>
+</section>
+<section aria-labelledby="caption-title" class="section caption-section" id="ai-captions">
+<div class="container">
+<div class="caption-intro">
+<div>
+<span class="eyebrow">대표 기능 · AI 자동 자막</span>
+<h2 id="caption-title">녹음을 듣고,<br/>시간을 맞추고,<br/>영상에 남깁니다.</h2>
+</div>
+<div class="caption-summary">
+<p>
               포함된 음성 인식 AI가 통화 오디오를 기기 안에서 처리합니다.
               인식한 문장을 재생 시간에 맞추고, 재생기와 관계없이 보이도록
               자막을 MP4 영상에 직접 입힙니다.
               AI 자막은 음질에 따라 다르게 인식될 수 있습니다. 완성 영상에서
               내용을 확인해 주세요.
             </p>
-            <div class="caption-badges">
-              <span>기기 내 AI</span>
-              <span>자막 외부 전송 없음</span>
-              <span>녹음 업로드 없음</span>
-              <span>Pixel 4 실기기 검증</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="caption-showcase">
-          <figure class="caption-card">
-            <figcaption class="caption-card-copy">
-              <span class="caption-step">01 · 음성 인식</span>
-              <h3>기기 안에서 AI 자막을 켭니다.</h3>
-              <p>
+<div class="caption-badges">
+<span>기기 내 AI</span>
+<span>자막 외부 전송 없음</span>
+<span>녹음 업로드 없음</span>
+<span>Pixel 4 실기기 검증</span>
+</div>
+</div>
+</div>
+<div class="caption-showcase">
+<figure class="caption-card">
+<figcaption class="caption-card-copy">
+<span class="caption-step">01 · 음성 인식</span>
+<h3>기기 안에서 AI 자막을 켭니다.</h3>
+<p>
                 기본 Base Q5 모델이 녹음을 외부로 보내지 않고 Android 기기 안에서
                 자막 문장과 시간을 만듭니다.
               </p>
-            </figcaption>
-            <div class="caption-screen caption-screen-editor">
-              <img
-                src="./assets/phone-editor.png"
-                width="1080"
-                height="1920"
-                alt="이 기기 처리, Base Q5 모델과 AI 자막 인식 안내를 보여주는 화면"
-                loading="lazy"
-              >
-            </div>
-          </figure>
-
-          <figure class="caption-card">
-            <figcaption class="caption-card-copy">
-              <span class="caption-step">02 · 영상 적용</span>
-              <h3>시간에 맞춰 MP4에 직접 입힙니다.</h3>
-              <p>
+</figcaption>
+<div class="caption-screen caption-screen-editor">
+<img alt="이 기기 처리, Base Q5 모델과 AI 자막 인식 안내를 보여주는 화면" height="1920" loading="lazy" src="./assets/phone-editor.png" width="1080"/>
+</div>
+</figure>
+<figure class="caption-card">
+<figcaption class="caption-card-copy">
+<span class="caption-step">02 · 영상 적용</span>
+<h3>시간에 맞춰 MP4에 직접 입힙니다.</h3>
+<p>
                 AI 자막 생성 진행률을 확인하고 H.264·AAC 영상의 픽셀에 함께
                 렌더합니다. 완성 영상에서 자막을 확인한 뒤 저장·공유합니다.
               </p>
-            </figcaption>
-            <div class="caption-screen caption-screen-rendering">
-              <img
-                src="./assets/phone-rendering.png"
-                width="1080"
-                height="1920"
-                alt="AI 자막 생성 진행률과 작업 취소 버튼을 보여주는 화면"
-                loading="lazy"
-              >
-            </div>
-          </figure>
-        </div>
-
-        <ol class="caption-pipeline">
-          <li>
-            <span>01</span>
-            <strong>통화 음성 준비</strong>
-            <small>오디오를 자막 인식에 맞게 나눕니다.</small>
-          </li>
-          <li>
-            <span>02</span>
-            <strong>Base Q5 AI 인식</strong>
-            <small>기기 안에서 문장과 시간을 만듭니다.</small>
-          </li>
-          <li>
-            <span>03</span>
-            <strong>MP4 자막 렌더</strong>
-            <small>재생 시간에 맞춰 영상에 직접 입힙니다.</small>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="features" aria-labelledby="features-title">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">핵심 기능</span>
-          <h2 id="features-title">자막부터 보관까지,<br>핵심만 담았습니다.</h2>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-              </svg>
-            </div>
-            <h3>표지와 결합</h3>
-            <p>제목, 상대 이름, 녹음 시각과 파형을 한 장의 정적인 표지로 정리합니다.</p>
-          </article>
-
-          <article class="feature-card feature-card-highlight">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M4 12v2a2 2 0 0 0 2 2h2l4 4V4L8 8H6a2 2 0 0 0-2 2v2Z"/>
-                <path d="M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/>
-              </svg>
-            </div>
-            <span class="feature-tag">대표 기능</span>
-            <h3>AI 자동 자막</h3>
-            <p>포함된 Base Q5 음성 인식 AI로 오디오를 기기 안에서 처리해 영상에 자막을 직접 입힙니다.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <rect x="3" y="4" width="14" height="14" rx="2"/>
-                <path d="M7 8h6M7 12h4M8 21h11a2 2 0 0 0 2-2V8"/>
-              </svg>
-            </div>
-            <h3>대량 만들기</h3>
-            <p>최대 20개의 녹음을 고르고 보상형 광고의 보상을 받은 뒤, 한 파일씩 안전하게 자막과 영상을 만듭니다.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 3v12m0 0 4-4m-4 4-4-4"/>
-                <path d="M5 19h14"/>
-              </svg>
-            </div>
-            <h3>갤러리 저장</h3>
-            <p>완성한 MP4를 확인한 뒤, 사용자가 직접 선택한 순간에만 갤러리에 저장합니다.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/>
-                <path d="m9 12 2 2 4-5"/>
-              </svg>
-            </div>
-            <h3>로컬 보관</h3>
-            <p>원본 복사본, 편집 정보, AI 자막과 완성 영상은 다른 일반 앱이 읽기 어려운 앱 공간에 둡니다.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="icon-box">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.2-1.5A4.8 4.8 0 0 0 7 18Z"/>
-                <path d="m4 4 16 16"/>
-              </svg>
-            </div>
-            <h3>녹음 업로드 없음</h3>
-            <p>가입 없이 사용하며, 녹음을 개발자 서버에 업로드하지 않습니다. 광고는 대량 만들기에서만 직접 선택합니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section screens-section" id="screens" aria-labelledby="screens-title">
-      <div class="container">
-        <div class="split-heading">
-          <div>
-            <span class="eyebrow">화면 구성</span>
-            <h2 id="screens-title">필요한 것만 고르고,<br>기기 안에서 끝냅니다.</h2>
-          </div>
-          <p>
+</figcaption>
+<div class="caption-screen caption-screen-rendering">
+<img alt="AI 자막 생성 진행률과 작업 취소 버튼을 보여주는 화면" height="1920" loading="lazy" src="./assets/phone-rendering.png" width="1080"/>
+</div>
+</figure>
+</div>
+<ol class="caption-pipeline">
+<li>
+<span>01</span>
+<strong>통화 음성 준비</strong>
+<small>오디오를 자막 인식에 맞게 나눕니다.</small>
+</li>
+<li>
+<span>02</span>
+<strong>Base Q5 AI 인식</strong>
+<small>기기 안에서 문장과 시간을 만듭니다.</small>
+</li>
+<li>
+<span>03</span>
+<strong>MP4 자막 렌더</strong>
+<small>재생 시간에 맞춰 영상에 직접 입힙니다.</small>
+</li>
+</ol>
+</div>
+</section>
+<section aria-labelledby="features-title" class="section" id="features">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">핵심 기능</span>
+<h2 id="features-title">자막부터 보관까지,<br/>핵심만 담았습니다.</h2>
+</div>
+<div class="feature-grid">
+<article class="feature-card">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<rect height="18" rx="2" width="18" x="3" y="3"></rect>
+<circle cx="8.5" cy="8.5" r="1.5"></circle>
+<path d="m21 15-5-5L5 21"></path>
+</svg>
+</div>
+<h3>표지와 결합</h3>
+<p>제목, 상대 이름, 녹음 시각과 파형을 한 장의 정적인 표지로 정리합니다.</p>
+</article>
+<article class="feature-card feature-card-highlight">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 12v2a2 2 0 0 0 2 2h2l4 4V4L8 8H6a2 2 0 0 0-2 2v2Z"></path>
+<path d="M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"></path>
+</svg>
+</div>
+<span class="feature-tag">대표 기능</span>
+<h3>AI 자동 자막</h3>
+<p>포함된 Base Q5 음성 인식 AI로 오디오를 기기 안에서 처리해 영상에 자막을 직접 입힙니다.</p>
+</article>
+<article class="feature-card">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<rect height="14" rx="2" width="14" x="3" y="4"></rect>
+<path d="M7 8h6M7 12h4M8 21h11a2 2 0 0 0 2-2V8"></path>
+</svg>
+</div>
+<h3>대량 만들기</h3>
+<p>최대 20개의 녹음을 고르고 보상형 광고의 보상을 받은 뒤, 한 파일씩 안전하게 자막과 영상을 만듭니다.</p>
+</article>
+<article class="feature-card">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 3v12m0 0 4-4m-4 4-4-4"></path>
+<path d="M5 19h14"></path>
+</svg>
+</div>
+<h3>갤러리 저장</h3>
+<p>완성한 MP4를 확인한 뒤, 사용자가 직접 선택한 순간에만 갤러리에 저장합니다.</p>
+</article>
+<article class="feature-card">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"></path>
+<path d="m9 12 2 2 4-5"></path>
+</svg>
+</div>
+<h3>로컬 보관</h3>
+<p>원본 복사본, 편집 정보, AI 자막과 완성 영상은 다른 일반 앱이 읽기 어려운 앱 공간에 둡니다.</p>
+</article>
+<article class="feature-card">
+<div class="icon-box">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.2-1.5A4.8 4.8 0 0 0 7 18Z"></path>
+<path d="m4 4 16 16"></path>
+</svg>
+</div>
+<h3>녹음 업로드 없음</h3>
+<p>가입 없이 사용하며, 녹음을 개발자 서버에 업로드하지 않습니다. 앱에는 광고가 표시될 수 있고, 여러 파일 만들기의 보상형 광고는 직접 선택합니다.</p>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="screens-title" class="section screens-section" id="screens">
+<div class="container">
+<div class="split-heading">
+<div>
+<span class="eyebrow">화면 구성</span>
+<h2 id="screens-title">필요한 것만 고르고,<br/>기기 안에서 끝냅니다.</h2>
+</div>
+<p>
             보관함, 단건 편집, 렌더 진행과 완성 영상 확인을 같은 흐름 안에서 짧게 정리했습니다.
           </p>
-        </div>
-
-        <div class="screen-grid">
-          <figure class="screen-card">
-            <div class="screen-frame">
-              <img
-                src="./assets/phone-library.png"
-                width="1080"
-                height="1920"
-                alt="통화필름 보관함에서 녹음 프로젝트를 확인하는 화면"
-                loading="lazy"
-              >
-            </div>
-            <figcaption>보관함과 최근 작업</figcaption>
-          </figure>
-
-          <figure class="screen-card">
-            <div class="screen-frame">
-              <img
-                src="./assets/phone-editor.png"
-                width="1080"
-                height="1920"
-                alt="통화필름에서 제목과 표지를 편집하는 화면"
-                loading="lazy"
-              >
-            </div>
-            <figcaption>표지 미리보기와 정보 편집</figcaption>
-          </figure>
-
-          <figure class="screen-card">
-            <div class="screen-frame">
-              <img
-                src="./assets/phone-completed.png"
-                width="1080"
-                height="1920"
-                alt="통화필름에서 완성 영상을 미리 보고 저장하는 화면"
-                loading="lazy"
-              >
-            </div>
-            <figcaption>완성 영상 미리보기와 저장</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="workflow-title">
-      <div class="container workflow-grid">
-        <div>
-          <span class="eyebrow">사용 방법</span>
-          <h2 id="workflow-title">영상은 이렇게 만듭니다.</h2>
-          <ol class="steps">
-            <li>
-              <span>1</span>
-              <p>Android 파일 선택기에서 정당하게 보유한 녹음을 고릅니다.</p>
-            </li>
-            <li>
-              <span>2</span>
-              <p>제목과 상대 이름을 정리하고 표지를 미리 봅니다.</p>
-            </li>
-            <li>
-              <span>3</span>
-              <p>AI 자동 자막을 켜고 기기 내 모델을 선택한 뒤, 자막이 입혀진 MP4를 만듭니다.</p>
-            </li>
-            <li>
-              <span>4</span>
-              <p>완성 영상을 확인하고 갤러리 저장이나 공유를 직접 선택합니다.</p>
-            </li>
-          </ol>
-        </div>
-
-        <div>
-          <span class="eyebrow">알아둘 점</span>
-          <h2>사용 전 확인</h2>
-          <div class="notice-list">
-            <article>
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 9v4M12 17h.01"/>
-                <path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"/>
-              </svg>
-              <p>영상 만들기는 포그라운드에서 진행됩니다. 렌더 중에는 앱 화면을 유지하세요.</p>
-            </article>
-            <article>
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 9v4M12 17h.01"/>
-                <path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"/>
-              </svg>
-              <p>64비트 Android 7.0 이상을 대상으로 하며, 기기 인코더 지원에 따라 결과가 달라질 수 있습니다.</p>
-            </article>
-            <article>
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 9v4M12 17h.01"/>
-                <path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"/>
-              </svg>
-              <p>통화 녹음과 공유에 필요한 동의와 법률은 지역마다 다릅니다. 정당하게 보유한 녹음만 사용하세요.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="release-cta" id="release" aria-labelledby="release-title">
-      <div class="container release-grid">
-        <div>
-          <p class="release-label">ANDROID 마켓 출시 예정</p>
-          <h2 id="release-title">공식 마켓에서<br>안전하게 설치할 수 있도록.</h2>
-          <p>
-            BUILD 1의 AI 자막·렌더 실기기 검증과 Google Play 등록을 준비하고 있습니다.
-            배포가 시작되면 이 페이지의 예정 상태를 공식 설치 링크로 교체합니다.
-          </p>
-        </div>
-        <div class="release-actions">
-          <span class="button button-dark button-disabled" role="status" aria-disabled="true">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 7v5l3 2"/>
-              <circle cx="12" cy="12" r="9"/>
-            </svg>
-            Android 마켓 다운로드 예정
-          </span>
-          <a
-            class="button button-outline-dark"
-            href="https://github.com/akra-devs/mp4-transition-pages"
-            target="_blank"
-            rel="noreferrer"
-          >
+</div>
+<div class="screen-grid">
+<figure class="screen-card">
+<div class="screen-frame">
+<img alt="통화필름 보관함에서 녹음 프로젝트를 확인하는 화면" height="1920" loading="lazy" src="./assets/phone-library.png" width="1080"/>
+</div>
+<figcaption>보관함과 최근 작업</figcaption>
+</figure>
+<figure class="screen-card">
+<div class="screen-frame">
+<img alt="통화필름에서 제목과 표지를 편집하는 화면" height="1920" loading="lazy" src="./assets/phone-editor.png" width="1080"/>
+</div>
+<figcaption>표지 미리보기와 정보 편집</figcaption>
+</figure>
+<figure class="screen-card">
+<div class="screen-frame">
+<img alt="통화필름에서 완성 영상을 미리 보고 저장하는 화면" height="1920" loading="lazy" src="./assets/phone-completed.png" width="1080"/>
+</div>
+<figcaption>완성 영상 미리보기와 저장</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="workflow-title" class="section">
+<div class="container workflow-grid">
+<div>
+<span class="eyebrow">사용 방법</span>
+<h2 id="workflow-title">영상은 이렇게 만듭니다.</h2>
+<ol class="steps">
+<li>
+<span>1</span>
+<p>Android 파일 선택기에서 정당하게 보유한 녹음을 고릅니다.</p>
+</li>
+<li>
+<span>2</span>
+<p>제목과 상대 이름을 정리하고 표지를 미리 봅니다.</p>
+</li>
+<li>
+<span>3</span>
+<p>AI 자동 자막을 켜고 기기 내 모델을 선택한 뒤, 자막이 입혀진 MP4를 만듭니다.</p>
+</li>
+<li><span>4</span> 보관함에서 원하는 말을 검색하고 자막 시간을 눌러 그 순간으로 이동합니다. 확인한 영상은 기기에 저장하거나 공유할 수 있습니다.</li>
+</ol>
+</div>
+<div>
+<span class="eyebrow">알아둘 점</span>
+<h2>사용 전 확인</h2>
+<div class="notice-list">
+<article>
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 9v4M12 17h.01"></path>
+<path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"></path>
+</svg>
+<p>영상 만들기는 포그라운드에서 진행됩니다. 렌더 중에는 앱 화면을 유지하세요.</p>
+</article>
+<article>
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 9v4M12 17h.01"></path>
+<path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"></path>
+</svg>
+<p>64비트 Android 7.0 이상을 대상으로 하며, 기기 인코더 지원에 따라 결과가 달라질 수 있습니다.</p>
+</article>
+<article>
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 9v4M12 17h.01"></path>
+<path d="m10.3 3.7-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.3l-8-14a2 2 0 0 0-3.4 0Z"></path>
+</svg>
+<p>통화 녹음과 공유에 필요한 동의와 법률은 지역마다 다릅니다. 정당하게 보유한 녹음만 사용하세요.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="release-title" class="release-cta" id="release">
+<div class="container release-grid">
+<div>
+<p class="release-label">GOOGLE PLAY</p>
+<h2 id="release-title">Google Play에서 통화필름을 설치하세요.</h2>
+<p>공식 스토어에서 설치하고 최신 버전으로 업데이트할 수 있습니다.</p>
+</div>
+<div class="release-actions">
+<a class="button button-dark" href="https://play.google.com/store/apps/details?id=kr.akra.callfilm">Google Play에서 설치</a>
+<a class="button button-outline-dark" href="https://github.com/akra-devs/mp4-transition-pages" rel="noreferrer" target="_blank">
             배포 저장소
           </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="./assets/akra-logo.png" width="1024" height="1024" alt="Akra Dev">
-        <p>통화 녹음을 AI 자막이 있는 영상으로.</p>
-      </div>
-      <nav aria-label="하단 메뉴">
-        <a href="#features">제품 소개</a>
-        <a href="#screens">화면 미리보기</a>
-        <a href="#release">출시 상태</a>
-        <a href="./support/">지원</a>
-        <a href="./privacy/">개인정보 처리방침</a>
-        <a
-          href="https://github.com/akra-devs/mp4-transition-pages"
-          target="_blank"
-          rel="noreferrer"
-        >
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div class="footer-brand">
+<img alt="Akra Dev" height="1024" src="./assets/akra-logo.png" width="1024"/>
+<p>통화 녹음을 AI 자막이 있는 영상으로.</p>
+</div>
+<nav aria-label="하단 메뉴">
+<a href="#features">제품 소개</a>
+<a href="#screens">화면 미리보기</a>
+<a href="#release">출시 상태</a>
+<a href="./support/">지원</a>
+<a href="./privacy/">개인정보 처리방침</a>
+<a href="https://github.com/akra-devs/mp4-transition-pages" rel="noreferrer" target="_blank">
           GitHub
         </a>
-      </nav>
-    </div>
-    <div class="container footer-bottom">
-      <p>Copyright © 2026 Akra Dev Studio. All rights reserved.</p>
-      <p>Designed &amp; built for CallFilm</p>
-    </div>
-  </footer>
+</nav>
+</div>
+<div class="container footer-bottom">
+<p>Copyright © 2026 Akra Dev Studio. All rights reserved.</p>
+<p>Designed &amp; built for CallFilm</p>
+</div>
+</footer>
 </body>
 </html>
