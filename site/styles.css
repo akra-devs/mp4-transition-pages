@@ -349,6 +349,12 @@ h1 {
   text-shadow: 0 0 28px rgb(96 165 250 / 14%);
 }
 
+#hero-title {
+  font-size: clamp(2.05rem, 5vw, 4rem);
+  line-height: 1.24;
+  word-break: keep-all;
+}
+
 h2 {
   margin-bottom: 24px;
   font-size: clamp(2.45rem, 4.5vw, 4.25rem);

@@ -13,8 +13,7 @@ fixture, and the GitHub Pages deployment workflow.
 Current public status:
 
 - App version: `1.0.0`
-- Android build: `1`
-- Distribution: Android market download planned
+- Distribution: [Google Play](https://play.google.com/store/apps/details?id=kr.akra.callfilm)
 - Direct APK downloads: not provided
 
 ## Repository layout
@@ -45,5 +44,4 @@ python3 -m http.server 4173 --directory site
 
 Then open <http://127.0.0.1:4173/>.
 
-The `main` branch is deployed with GitHub Actions. When the Google Play listing
-is public, replace the planned-download status with the official store URL.
+The `main` branch is deployed with GitHub Actions. Installation links point to the official Google Play listing.

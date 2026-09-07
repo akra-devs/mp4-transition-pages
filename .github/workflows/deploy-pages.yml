@@ -41,7 +41,11 @@ jobs:
           grep -Fq 'help@akra.kr' site/privacy/index.html
           grep -Fq 'Hugging Face' site/privacy/index.html
           grep -Fq 'Firebase' site/privacy/index.html
-          grep -Fq '1.2.0' site/privacy/index.html
+          grep -Fq '1.3.0' site/privacy/index.html
+          grep -Fq 'workflow_step' site/privacy/index.html
+          grep -Fq 'workflow_step' site/privacy/en/index.html
+          test -s site/privacy/archive/1.2.0/index.html
+          test -s site/privacy/en/archive/1.2.0/index.html
           grep -Fq 'Hugging Face' site/privacy/en/index.html
           grep -Fq 'Firebase' site/privacy/en/index.html
           grep -Fq 'Turbo' site/support/index.html
