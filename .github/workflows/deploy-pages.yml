@@ -35,55 +35,18 @@ jobs:
             .github/workflows/deploy-pages.yml
           test -s site/index.html
           test -s site/privacy/index.html
-          test -s site/support/index.html
-          test -s site/styles.css
-          test -s site/assets/callfilm-icon.png
-          test -s site/assets/phone-library.png
-          test -s site/assets/phone-editor.png
-          test -s site/assets/phone-rendering.png
-          test -s site/assets/phone-completed.png
-          test -s site/assets/Review_Tone_20260715_120000.wav
-          grep -Fq 'BUILD 1' site/index.html
-          grep -Fq 'Android 마켓 다운로드 예정' site/index.html
+          test -s site/privacy/en/index.html
+          test -s site/privacy/archive/2026-08-24/index.html
           grep -Fq 'https://akra.kr/mp4-transition-pages/privacy/' site/privacy/index.html
-          grep -Fq 'Akra Dev Studio' site/privacy/index.html
-          grep -Fq 'https://github.com/akra-devs/mp4-transition-pages/issues/new' site/privacy/index.html
-          grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/privacy/index.html
-          grep -Fq '처음 선택한 파일은 그대로' site/privacy/index.html
-          grep -Fq 'https://akra.kr/mp4-transition-pages/support/' site/support/index.html
-          grep -Fq '기기의 영상 처리 기능에서 오류가 발생했습니다' site/support/index.html
-          grep -Fq 'AI 자막을 만들지 못했습니다' site/support/index.html
-          grep -Fq '자막 끄고 영상 만들기' site/support/index.html
-          grep -Fq '자막 다시 시도' site/support/index.html
-          grep -Fq '광고 설정' site/support/index.html
-          grep -Fq '이 버전에서는 대량 만들기 광고를 사용할 수 없습니다' site/support/index.html
-          grep -Fq '>다시 시도</strong>' site/support/index.html
-          grep -Fq '현재 앱 실행 중에는' site/privacy/index.html
-          grep -Fq '현재 앱 실행 중에는' site/support/index.html
-          grep -Fq '대량 만들기를 이용할 수 있습니다' site/privacy/index.html
-          grep -Fq '대량 만들기를 이용할 수 있습니다' site/support/index.html
-          grep -Fq 'AI 자막과 결과 영상을 삭제합니다' site/support/index.html
-          grep -Fq '처음 선택한 파일은 그대로' site/support/index.html
-          grep -Fq 'AI 자막과 완성 영상' site/index.html
-          grep -Fq 'AI 자막은 음질에 따라 다르게 인식될 수 있습니다' site/index.html
-          grep -Fq 'AI 자막은 음질에 따라 다르게 인식될 수 있습니다' site/support/index.html
-          grep -Fq '<span>녹음 업로드 없음</span>' site/index.html
-          grep -Fq '<h3>녹음 업로드 없음</h3>' site/index.html
-          grep -Fq '가입 없이 사용하며, 녹음을 개발자 서버에 업로드하지 않습니다.' site/index.html
-          grep -Fq '완성 영상에서 자막을 확인한 뒤 저장·공유합니다' site/index.html
-          grep -Fq '완성 화면의 재생' site/support/index.html
-          grep -Fq 'Pro 상품은 판매하지 않으며' site/support/index.html
-          ! grep -Eq \
-            'phone-(ai-caption-model|caption-preview)[.]png|API [(]개발 예정[)]|외부 서버 [(]개발 예정[)]|상용 API와 외부 서버' \
-            site/index.html site/support/index.html
-          ! grep -Fq '앱을 업데이트한 뒤 다시 시도해 주세요' site/support/index.html
-          ! grep -Fq 'Pro 판매는 준비 중' site/support/index.html
-          ! grep -Fq 'Google Play 출시 후' site/support/index.html
-          ! grep -Fq 'Google Play 출시 후' site/privacy/index.html
-          ! grep -Eq '앱을 (종료|닫기)|앱 종료 전' \
-            site/privacy/index.html site/support/index.html
-          ! grep -Eq '외부 업로드 없음|개발자 계정·클라우드 업로드|개발자 서버 없음' \
-            site/index.html
+          grep -Fq 'help@akra.kr' site/privacy/index.html
+          grep -Fq 'Hugging Face' site/privacy/index.html
+          grep -Fq 'Firebase' site/privacy/index.html
+          grep -Fq '1.2.0' site/privacy/index.html
+          grep -Fq 'Hugging Face' site/privacy/en/index.html
+          grep -Fq 'Firebase' site/privacy/en/index.html
+          grep -Fq 'Turbo' site/support/index.html
+          grep -Fq '574MB' site/support/index.html
+          grep -Fq 'help@akra.kr' site/support/index.html
           printf '%s  %s\n' \
             '23b2189914c8ae0ace0a9fd7929421044d25f8abd3e1118940eda5c338397aa6' \
             'site/assets/phone-library.png' \

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><base href="/mp4-transition-pages/privacy/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#09090b" name="theme-color"/>
+<meta content="통화필름(CallFilm)의 개인정보 처리방침. 녹음과 자막은 기기 안에서 처리하고 대량 만들기에는 Google 보상형 광고를 사용합니다." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="통화필름 개인정보 처리방침" property="og:title"/>
+<meta content="통화필름이 처리하는 정보, 권한, 보관·삭제와 문의 방법을 확인하세요." property="og:description"/>
+<meta content="https://akra.kr/mp4-transition-pages/privacy/" property="og:url"/>
+<link href="https://akra.kr/mp4-transition-pages/privacy/" rel="canonical"/>
+<title>Privacy Policy | CallFilm</title>
+<link href="../assets/callfilm-icon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="../styles.css" rel="stylesheet"/>
+</head>
+<body class="document-page">
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+<header class="document-nav">
+<a aria-label="통화필름 제품 페이지" class="document-brand" href="../">
+<img alt="" height="512" src="../assets/callfilm-icon.png" width="512"/>
+<span>
+<strong>통화필름</strong>
+<small>CALLFILM</small>
+</span>
+</a>
+<nav aria-label="문서 메뉴"><a href="/mp4-transition-pages/privacy/">한국어</a>
+<a href="../support/">지원</a>
+<a class="document-nav-primary" href="../">제품으로 돌아가기</a>
+</nav>
+</header>
+<main class="document-shell" id="main">
+<header class="document-hero">
+<span class="eyebrow">CALLFILM · PRIVACY</span>
+<h1>Privacy Policy</h1>
+<p>Recordings, captions and videos are processed on your device. Google services support ads, usage analytics and crash diagnostics. Optional model downloads connect to Hugging Face.</p>
+<p class="document-date">Version 1.2.0 · 2026-09-07</p>
+</header>
+<aside aria-label="개인정보 처리 요약" class="document-summary"><div><span>Audio and captions</span><strong>On device</strong></div><div><span>Audio upload</span><strong>None</strong></div><div><span>Network services</span><strong>Google · Hugging Face</strong></div></aside>
+<article class="document-content"><section><h2>Optional caption model downloads</h2>
+<p>Only when you select the model download action in Settings, CallFilm connects over
+HTTPS to Hugging Face and its file delivery network to retrieve model data. The
+hosting service may receive connection metadata, including your IP address and
+the requested public model URL, under the <a href="https://huggingface.co/privacy">Hugging Face Privacy Policy</a>.
+Recordings, contacts, captions, source file names and rendered videos are not
+sent. Downloaded models remain in app-private storage until app data is cleared
+or the app is removed. Internet permission also supports this optional download.</p>
+</section><section><h2>Information processed</h2>
+<p>The app processes media explicitly chosen through the Android system picker;
+file name, MIME type, size, modified time, and SHA-256 integrity digest; a title,
+counterparty name, phone number, recording time, and duration entered or selected
+by the user; one contact name and number explicitly selected through the Android
+contact picker; SRT or WebVTT files selected by the user and their name, format,
+and SHA-256 digest; caption text, speaker, and timing information; and generated
+cover images and MP4 files. Video inputs contribute only their audio track. This
+content is used on the device to provide app features. The active caption
+document is stored in that recording's app-private directory.</p>
+</section><section><h2>Collection, transmission, and sharing of recordings and captions</h2>
+<p>CallFilm has no user account or developer-operated content server. It does not
+send selected media, contact details, call records, captions, or rendered videos
+to the developer, Google Analytics, Crashlytics, or an advertising provider.</p>
+<p>When the user chooses Share, the app creates a unique temporary copy at
+<code>cache/callfilm_shares/&lt;share-id&gt;/recording.mp4</code> and grants temporary read access
+only to the destination selected in the Android share sheet. Saving to the
+gallery and exporting SRT or WebVTT also occur only after an explicit action and
+system destination choice. The receiving app or storage provider applies its own
+policy to an exported copy.</p>
+</section><section><h2>Advertising and information processed by Google</h2>
+<p>The User Messaging Platform checks advertising privacy status when the app
+starts. If an existing choice permits ad requests, Google Mobile Ads may request
+an app-open ad, banners on the four main tabs, and a completion ad after every
+third single-video export. Ads that are not ready are skipped. The batch rewarded
+ad and any required consent form open only after the user selects the button to
+watch an ad and begin.</p>
+<p>Google Mobile Ads may process IP address and approximate location, product
+interactions, diagnostics, Android advertising ID, app set ID, and related device
+or account identifiers to deliver and measure ads and prevent abuse. Data is
+encrypted in transit. Ads may be personalized, non-personalized, or limited
+according to region, device settings, and the user's Google privacy choices.
+CallFilm does not pass recordings, contacts, captions, covers, or rendered video
+to the ads SDK. Google's processing is governed by the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the
+<a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a>.
+Where required, Google presents a consent form. A privacy-options entry is
+available in Settings when Google reports that it is required.</p>
+</section><section><h2>Google Analytics and Firebase Crashlytics</h2>
+<p>Google Analytics for Firebase is always enabled in the Android app. Its default
+implementation processes user and session counts, session duration, operating
+system, device model, approximate geography, first launch, app opens and updates,
+and an app-instance identifier. CallFilm adds only these values:</p>
+<ul>
+<li>app ready (<code>app_ready</code>);</li>
+<li>current screen (<code>screen_view</code>, limited to <code>library</code>, <code>studio</code>, <code>batch</code>, or
+  <code>settings</code>); and</li>
+<li>video export completed (<code>video_export_completed</code>).</li>
+</ul>
+<p>CallFilm does not set an Analytics user ID or user properties. Analytics
+Advertising ID collection and ad-personalization signals are disabled in the
+Android manifest. This Analytics setting does not disable the separate Google
+Mobile Ads processing described above.</p>
+<p>Firebase Crashlytics processes crashes, application-not-responding events, and
+unhandled errors. It may process stack traces, relevant app state, app version,
+device and operating-system metadata, a Crashlytics installation UUID, Firebase
+installation ID, and session metadata. CallFilm adds only a predefined reason
+code, error type, and bounded technical state: app version, build, release
+channel, target platform, screen route, lifecycle state, configuration revision,
+operation code, renderer backend, generation and quality tier, and audio focus.
+Raw error messages are removed before reporting, and stack traces are restricted
+to app or Dart package locations and line numbers.</p>
+<p>CallFilm does not attach recording or video bytes, caption text, file names,
+paths or hashes, titles, counterparty names, phone numbers, contacts, search
+terms, email addresses, user IDs, or Advertising IDs to Analytics or
+Crashlytics. Under Google's current policy, Crashlytics keeps crash stack traces
+and associated identifiers for 90 days before beginning deletion. The connected
+Google Analytics property retains event data for 2 months and user data for 14
+months, with the user-data period reset on new activity. See
+<a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>
+and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+</section><section><h2>Permissions</h2>
+<p>The app does not request call-log, full contacts, microphone, or broad storage
+permission. Media, subtitle files, and a contact are read only when explicitly
+selected in an Android system picker. MediaStore or the system document picker
+is used for exports. Internet access is used for advertising privacy status,
+ads, usage analytics, crash diagnostics, and user-requested model downloads. Android Advertising ID and Privacy
+Sandbox advertising API permissions are used for advertising and abuse
+prevention; Analytics Advertising ID collection is separately disabled.</p>
+</section><section><h2>Secure processing</h2>
+<p>Selected files and call records are stored in app-private Android storage. The
+installed speech models process audio on the device in chunks of at most five
+minutes. The app does not use a remote caption API, upload audio, embed a caption
+API key. Base is bundled with the app, and Small and Medium are installed with
+the app through Google Play install-time asset packs. Only the additional Turbo
+model is downloaded from Hugging Face when requested in Settings. Android cloud backup and device
+transfer are disabled, cleartext traffic is disabled, and third-party audio
+playback capture is blocked. Exports occur only through an explicit user action.</p>
+</section><section><h2>Retention and deletion</h2>
+<p>A call record remains in app-private storage until the user deletes it in the
+app or removes the app. Deleting a record removes the app's source copy,
+metadata, cover, AI captions, rendered video, and imported final caption
+document. The originally selected file and external subtitle source remain at
+their original locations. Unreadable records are not deleted automatically; the
+user can confirm deletion from the Library recovery warning.</p>
+<p>Android may reclaim a share copy earlier; any remaining copy older than 24 hours
+is cleaned up on a later app start or sharing action. Exported copies must be
+deleted from their destination separately.</p>
+<p>Advertising information is not stored on a developer server and cannot be
+looked up by CallFilm as a user-specific record. Analytics and Crashlytics data
+is processed in the connected Firebase and Analytics projects. The app has no
+account and does not connect an app-instance identifier to a person's identity
+or support email, so it does not provide a way for the developer to locate and
+delete one person's remote records. Clearing app data or uninstalling removes
+local CallFilm data and identifiers; records already sent are deleted according
+to the applicable provider settings and retention rules.</p>
+</section><section><h2>User responsibility</h2>
+<p>Recording and sharing laws and consent requirements differ by country and
+region. Use only recordings you lawfully possess and for which you have obtained
+any required consent.</p>
+</section><section><h2>Contact</h2>
+<ul>
+<li>Developer display name: AkraDev Studio</li>
+<li>Email: <a href="mailto:help@akra.kr">help@akra.kr</a></li>
+<li>Website: <a href="https://akra.kr/">https://akra.kr/</a></li>
+<li>Public privacy policy: <a href="https://akra.kr/mp4-transition-pages/privacy/">https://akra.kr/mp4-transition-pages/privacy/</a></li>
+<li>Public issue tracker: <a href="https://github.com/akra-devs/mp4-transition-pages/issues/new">https://github.com/akra-devs/mp4-transition-pages/issues/new</a></li>
+</ul>
+<p>Use email for a privacy request. The issue tracker is public; do not attach or
+enter a recording, phone number, or other personal information there.</p></section><p><a href="/mp4-transition-pages/privacy/archive/2026-08-24/">이전 정책 / Previous policy (2026-08-24)</a></p></article>
+</main>
+<footer class="document-footer">
+<div class="document-footer-inner">
+<p>Copyright © 2026 Akra Dev Studio.</p>
+<nav aria-label="하단 문서 메뉴">
+<a href="../">제품</a>
+<a href="../support/">지원</a>
+<a href="#main">맨 위로</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>
